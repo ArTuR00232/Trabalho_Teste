@@ -10,7 +10,7 @@ function cadastra()
     let outra = criausuario(ID,username,password, idade)
     dados = JSON.stringify(outra)
     localStorage.setItem(ID,dados)
-    alert("usuario criado")
+    alert("Usuário criado. Redirecionando...")
     window.location.href = ("login.html")
 }
 
@@ -30,23 +30,31 @@ function criausuario(id,username, password,idade)
 function checar()
 {
     let username = document.getElementById("input-nome").value
+    let idade = document.getElementById("input-idade").value
     let senha = document.getElementById("input-senha").value
     let confirma = document.getElementById("input-confirm").value
      if(username!="")
      {
-        
-         if(senha!="" && senha==confirma)
-         {
-             cadastra()
-         }
-         else
-         {
-             alert("As senhas não são compatíveis")
-         }
+        if(idade >= 18){
+            if(senha!="")
+            {
+                if(senha==confirma)
+                    cadastra()
+                else
+                    alert("As senhas devem ser compatíveis")
+            }
+            else
+            {
+                alert("É necessário sua senha para se cadastrar")
+            }
+        }
+        else{
+            alert("Você deve ser maior de 18 para se cadastrar")
+        }
      }
      else
      {
-         alert("È necessário seu nome")
+         alert("É necessário seu nome para se cadastrar")
      }
 }
 
