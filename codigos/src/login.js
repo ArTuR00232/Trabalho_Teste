@@ -7,18 +7,25 @@ function verifica(nome, senha)
         let nom = objeto.username
         if(nome == nom)
         {
-            if(senha == sen)
+            if(senha!="")
             {
-                window.location.href=("reset.html")
+                if(senha == sen )
+                {
+                    window.location.href=("reset.html")
+                }
+                else
+                {
+                    alert("senha incorreta")
+                }
             }
             else
             {
-                alert("senha incorreta")
+             alert("insira a senha")
             }
             
         }
-
-    }
         alert("nome incorreto")
+    }
+        
 }
 
