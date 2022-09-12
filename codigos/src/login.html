@@ -7,7 +7,7 @@
     <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
-    <script src ="src.js"></script>
+    <script src ="login.js"></script>
     <title>Cadastro</title>
 </head>
 <body>
@@ -16,7 +16,9 @@
             <h3 class="titulo">Login</h3>
             <input type="text" name="nome" id="input-nome" placeholder="Digite seu usuário" class="form-control mt-2 inputs">
             <input type="password" name="senha" id="input-senha" placeholder="Digite sua senha" class="form-control mt-2 inputs">
-            <input type="button" onclick="checar()" value="login" class="btn btn-primary mt-4">
+            <a href="reset.html">
+                <input type="button" onclick="verifica(input-nome.value,input-senha.value)" value="login" class="btn btn-primary mt-4">
+            </a>
         </div>
         <a href="index.html">
             <button type="button" id = "cadastro" class="btn btn-primary mt-4" >cadastrar</button>
