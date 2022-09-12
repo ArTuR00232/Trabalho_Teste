@@ -11,7 +11,7 @@ function cadastra()
     dados = JSON.stringify(outra)
     localStorage.setItem(ID,dados)
     alert("usuario criado")
-    //window.location.href = ("login.html")
+    window.location.href = ("login.html")
 }
 
 function criausuario(id,username, password,idade)
