@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(Roboto-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(Roboto-Regular.ttf);
+}
+
+.titulo {
+    font-family: Roboto-Regular;
+}
+
+.inputs {
+    font-family: Roboto-Light;
+}
