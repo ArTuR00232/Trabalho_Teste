@@ -1,6 +1,3 @@
-
-//var id = 0;
-//<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 function cadastra()
 {
     let username =  document.getElementById("input-nome").value
@@ -10,8 +7,7 @@ function cadastra()
     let outra = criausuario(ID,username,password, age)
     dados = JSON.stringify(outra)
     localStorage.setItem(ID,dados)
-    alert("Usuário criado. Redirecionando...")
-    window.location.href = ("login.html")
+    document.getElementById("redireciona").addEventListener("click",window.location.href = ("login.html"))
 }
 
 function criausuario(id,username, password,age)
@@ -62,4 +58,9 @@ function limpar()
 {
    localStorage.clear()
    window.location.href = ("index.html")
+}
+
+function rota()
+{
+    document.getElementById("resposta").innerHTML = "usuario criado, redirecionando... "
 }
